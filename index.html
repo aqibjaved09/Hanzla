@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marco Polo Traveler — Guided Journeys through Northern Pakistan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header id="siteHeader">
+    <div class="brand" data-page="home" onclick="goTo('home')">
+      <svg class="mark" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#E2711D" stroke-width="1.6" />
+        <circle cx="24" cy="24" r="18.5" stroke="#7FC8CB" stroke-width="0.8" opacity="0.6" />
+        <path d="M9 30L16 15L20.5 23L24 12L27.5 23L32 15L39 30" stroke="#E2711D" stroke-width="2.2"
+          stroke-linejoin="round" stroke-linecap="round" />
+        <circle cx="24" cy="12" r="1.7" fill="#7FC8CB" />
+      </svg>
+      Marco Polo Traveler
+    </div>
+    <nav>
+      <ul id="navList">
+        <li><a data-page="home" onclick="goTo('home')">Home</a></li>
+        <li><a data-page="road-trips" onclick="goTo('road-trips')">Road Trips</a></li>
+        <li><a data-page="bike-tours" onclick="goTo('bike-tours')">Bike Tours</a></li>
+        <li><a data-page="trekking" onclick="goTo('trekking')">Trekking</a></li>
+        <li><a data-page="journal" onclick="goTo('journal')">Journal</a></li>
+        <li><a data-page="contact" class="nav-cta" onclick="goTo('contact')">Plan a Trip</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+
+    <!-- ============ HOME ============ -->
+    <div class="page active" id="page-home">
+      <section class="hero">
+        <div class="hero-slides" id="heroSlides" aria-hidden="true"></div>
+        <div class="hero-scrim"></div>
+        <div class="hero-inner">
+          <div class="eyebrow"><span class="dot"></span> GILGIT-BALTISTAN, HAZARA &amp; THE KARAKORAM · GUIDED BY
+            SOMEONE WHO'S ALREADY BEEN</div>
+          <h1>Northern Pakistan, walked<br> not just <em>looked at</em>.</h1>
+          <p class="sub" style="text-align: justify;">From the pine air of Nathia Gali to the glacial silence of
+            Khunjerab Pass on the China border
+            every route on this site is one I've actually travelled, on foot, by bike, and by jeep.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" onclick="goTo('road-trips')">See guided journeys</a>
+            <a class="btn btn-ghost" onclick="goTo('contact')">Plan your trip</a>
+          </div>
+        </div>
+        <div class="profile wrap" aria-hidden="true">
+          <svg viewBox="0 0 1180 260" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3E7C82" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#3E7C82" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <path class="profile-fill"
+              d="M0,260 L60,213 L236,197 L412,218 L588,202 L764,106 L940,70 L1116,30 L1180,30 L1180,260 Z"
+              fill="url(#g1)" />
+            <path class="profile-path" d="M60,213 L236,197 L412,218 L588,202 L764,106 L940,70 L1116,30" />
+            <circle class="profile-point" cx="60" cy="213" r="4" style="animation-delay:.7s" />
+            <text class="profile-place" x="60" y="196" text-anchor="middle" style="animation-delay:.8s">Murree</text>
+            <text class="profile-label" x="60" y="232" text-anchor="middle" style="animation-delay:.8s">2,291 m</text>
+            <circle class="profile-point" cx="236" cy="197" r="4" style="animation-delay:.9s" />
+            <text class="profile-place" x="236" y="180" text-anchor="middle" style="animation-delay:1s">Nathia
+              Gali</text>
+            <text class="profile-label" x="236" y="216" text-anchor="middle" style="animation-delay:1s">2,501 m</text>
+            <circle class="profile-point" cx="412" cy="218" r="4" style="animation-delay:1.1s" />
+            <text class="profile-place" x="412" y="240" text-anchor="middle" style="animation-delay:1.2s">Skardu</text>
+            <text class="profile-label" x="412" y="255" text-anchor="middle" style="animation-delay:1.2s">2,228 m</text>
+            <circle class="profile-point" cx="588" cy="202" r="4" style="animation-delay:1.3s" />
+            <text class="profile-place" x="588" y="185" text-anchor="middle" style="animation-delay:1.4s">Hunza</text>
+            <text class="profile-label" x="588" y="221" text-anchor="middle" style="animation-delay:1.4s">2,438 m</text>
+            <circle class="profile-point" cx="764" cy="106" r="5" style="animation-delay:1.6s" />
+            <text class="profile-place" x="764" y="88" text-anchor="middle" style="animation-delay:1.7s">Shandur
+              Pass</text>
+            <text class="profile-label" x="764" y="126" text-anchor="middle" style="animation-delay:1.7s">3,700 m · polo
+              ground</text>
+            <circle class="profile-point" cx="940" cy="70" r="5" style="animation-delay:1.9s" />
+            <text class="profile-place" x="940" y="52" text-anchor="middle" style="animation-delay:2s">Babusar
+              Top</text>
+            <text class="profile-label" x="940" y="90" text-anchor="middle" style="animation-delay:2s">4,173 m</text>
+            <circle class="profile-point" cx="1116" cy="30" r="5" style="animation-delay:2.1s" />
+            <text class="profile-place" x="1080" y="15" text-anchor="middle" style="animation-delay:2.2s">Khunjerab
+              Pass</text>
+            <text class="profile-label" x="1080" y="52" text-anchor="middle" style="animation-delay:2.2s">4,693 m ·
+              China border</text>
+          </svg>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow"
+                style="font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; color: var(--teal); background: rgba(38, 166, 154, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 12px; border: 1px solid rgba(38, 166, 154, 0.25);">
+                THE GUIDE</div>
+              <h2>Ten years of jeep tracks,<br>glacier trails, and passport stamps at 4,000&nbsp;metres.</h2>
+            </div>
+            <p style="text-align: justify;">This isn't a travel agency reading off a brochure. It's one traveller's
+              logbook, turned into a way for
+              others to follow the same routes safely.</p>
+          </div>
+          <div class="about-grid">
+            <div class="reveal">
+              <p style="text-align: justify;">I grew up chasing the roads most maps just draw as thin grey lines through
+                Gilgit-Baltistan, Khyber
+                Pakhtunkhwa, and the hill stations of Hazara. Over the years that's turned into real routes: standing at
+                Khunjerab Pass where Pakistan meets China, crossing Babusar Top before the snow closes it for the
+                season, watching a polo match at 3,700 metres on Shandur Pass, and losing track of time in Hunza and
+                Skardu more times than I can count.</p>
+              <p style="text-align: justify;">What started as personal trips became something people kept asking to
+                join. So this site exists for one
+                reason: to take a small number of travellers Pakistani or international, along on routes I already
+                know, on foot, by bike, or by jeep, with the logistics already worked out.</p>
+              <div class="stat-row" style="margin-bottom: 4rem;">
+                <div class="stat">
+                  <div class="num">40+</div>
+                  <div class="lbl">Expeditions Led</div>
+                </div>
+                <div class="stat">
+                  <div class="num">4,693m</div>
+                  <div class="lbl">Highest Pass Crossed</div>
+                </div>
+                <div class="stat">
+                  <div class="num">15</div>
+                  <div class="lbl">Valleys Covered</div>
+                </div>
+              </div>
+            </div>
+            <div class="quote-card reveal">
+              <p style="color: white; text-align: justify;">You don't really understand Hunza from a viewpoint. You
+                understand it after the third cup of walnut tea
+                with someone who's lived there their whole life.</p>
+              <div class="attrib">— Field Notes, Karimabad</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow"
+                style="font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; color: var(--teal); background: rgba(38, 166, 154, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 12px; border: 1px solid rgba(38, 166, 154, 0.25);">
+                THREE WAYS TO TRAVEL WITH ME</div>
+              <h2>Pick your pace</h2>
+            </div>
+            <p style="text-align: justify;">Whether you're in a jeep, on two wheels, or on foot every trip is built
+              around routes I've personally
+              run.</p>
+          </div>
+          <div class="service-grid reveal">
+            <div class="service-card">
+              <div class="idx mono">01</div>
+              <h3>Road Trips</h3>
+              <p>Hunza, Skardu, Khunjerab Pass, Babusar Top, Shandur Pass, Murree and Nathia Gali — by jeep and private
+                car, from easy escapes to high-altitude runs.</p>
+              <a class="btn btn-ghost" style="margin-top:16px; padding:10px 18px; font-size:0.75rem;"
+                onclick="goTo('road-trips')">Explore →</a>
+            </div>
+            <div class="service-card">
+              <div class="idx mono">02</div>
+              <h3>Bike Tours</h3>
+              <p>Motorcycle runs up the Karakoram Highway and through the northern passes — for riders who want the
+                wind, not the windscreen.</p>
+              <a class="btn btn-ghost" style="margin-top:16px; padding:10px 18px; font-size:0.75rem;"
+                onclick="goTo('bike-tours')">Explore →</a>
+            </div>
+            <div class="service-card">
+              <div class="idx mono">03</div>
+              <h3>Trekking &amp; Hiking</h3>
+              <p>Multi-day treks into the valleys and base camps that no road reaches — for travellers who want to earn
+                the view.</p>
+              <a class="btn btn-ghost" style="margin-top:16px; padding:10px 18px; font-size:0.75rem;"
+                onclick="goTo('trekking')">Explore →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="journal">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow"
+                style="font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; color: var(--teal); background: rgba(38, 166, 154, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 12px; border: 1px solid rgba(38, 166, 154, 0.25);">
+                FIELD NOTES</div>
+              <h2>From the journal</h2>
+            </div>
+            <p style="text-align: justify;">Real trip writing — this is what brings people to the site before they ever book anything.</p>
+          </div>
+          <div class="journal-grid">
+            <div class="post reveal">
+              <div class="meta">Khunjerab Pass · Guide</div>
+              <h3>Standing at 4,693 Metres: What It's Actually Like at the China Border</h3>
+              <p>Altitude, checkpoints, temperature swings, and the exact drive time from Sost.</p><a class="read"
+                style="display: inline-block; margin-bottom: 24px;" onclick="goTo('journal')">Read the entry →</a>
+            </div>
+            <div class="post reveal">
+              <div class="meta">Shandur Pass · Culture</div>
+              <h3>Polo at 3,700 Metres: Inside the World's Highest Polo Ground</h3>
+              <p>What it's like to watch the Shandur Polo Festival, and how to actually get there and back.</p><a
+                class="read" style="display: inline-block; margin-bottom: 24px;" onclick="goTo('journal')">Read the
+                entry →</a>
+            </div>
+            <div class="post reveal">
+              <div class="meta">Babusar Top · Route Notes</div>
+              <h3>Crossing Babusar Top Before the Snow Closes It</h3>
+              <p>The narrow window each year when the pass is open, and what the road looks like from Naran to Chilas.
+              </p><a class="read" style="display: inline-block; margin-bottom: 24px;" onclick="goTo('journal')">Read the
+                entry →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-hero">
+        <div class="wrap reveal">
+          <div class="eyebrow" style="justify-content:center; font-size: 1rem;">PLAN YOUR TRIP</div>
+          <h2>Next trip up the Karakoram Highway is already being planned.</h2>
+          <p>Tell me your dates, your fitness level, and how high you want to go — I'll build the route around it.</p>
+          <a class="btn btn-primary" style="margin-top:34px;" onclick="goTo('contact')">Start Planning →</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ ROAD TRIPS ============ -->
+    <div class="page" id="page-road-trips">
+      <section class="page-header">
+        <div class="page-header-bg" id="bgRoadTrips"></div>
+        <div class="page-header-scrim"></div>
+        <div class="wrap">
+          <div class="eyebrow"><span class="dot"></span> BY JEEP &amp; PRIVATE CAR</div>
+          <h1>Road Trips</h1>
+          <p class="sub">From easy hill-station escapes to the highest paved border crossing on earth — routes graded
+            honestly, so you know exactly what you're signing up for.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="tier-strip reveal">
+            <div class="tier">
+              <div class="lvl">Easy Escape</div>
+              <h4>Murree &amp; Nathia Gali</h4>
+              <p>2,200–2,500m. Short drive from Islamabad, no acclimatisation needed. Good for families and
+                first-timers.</p>
+            </div>
+            <div class="tier">
+              <div class="lvl">High Altitude</div>
+              <h4>Hunza, Skardu &amp; Shandur Pass</h4>
+              <p>2,200–3,700m. Full valley trips, some altitude gain, a couple of long driving days.</p>
+            </div>
+            <div class="tier">
+              <div class="lvl">Extreme Altitude</div>
+              <h4>Babusar Top &amp; Khunjerab Pass</h4>
+              <p>4,100–4,700m. Thin air, cold even in summer, and a seasonal window — these need proper planning.</p>
+            </div>
+          </div>
+          <div class="logbook">
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Murree</span><span class="elev mono">2,291 m</span><span
+                  class="coords mono">33.91°N, 73.39°E</span><span class="badge">Easy escape</span></div>
+              <div class="entry-body">
+                <p>The classic weekend hill station, an hour or two from Islamabad. Pine forests, Mall Road, and a good
+                  warm-up trip before heading further north.</p>
+                <div class="entry-tags"><span class="tag">Weekend trip</span><span class="tag">Family
+                    friendly</span><span class="tag">No permit</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Nathia Gali</span><span class="elev mono">2,501 m</span><span
+                  class="coords mono">34.07°N, 73.38°E</span><span class="badge">Easy escape</span></div>
+              <div class="entry-body">
+                <p>Quieter and greener than Murree, with walking trails through pine forest up to Mukshpuri and
+                  Miranjani tops. A good half-day add-on to a Murree trip.</p>
+                <div class="entry-tags"><span class="tag">Forest walks</span><span class="tag">Family friendly</span>
+                </div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Hunza Valley</span><span class="elev mono">2,438 m
+                  avg.</span><span class="coords mono">36.32°N, 74.65°E</span><span class="badge">High altitude</span>
+              </div>
+              <div class="entry-body">
+                <p>Karimabad, Altit and Baltit forts, apricot-blossom season, and the view of Rakaposhi that never quite
+                  looks real. The easiest of the high valleys to reach.</p>
+                <div class="entry-tags"><span class="tag">Photography</span><span class="tag">Culture</span><span
+                    class="tag">Family friendly</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Skardu &amp; Deosai</span><span class="elev mono">2,228 m –
+                  4,114 m</span><span class="coords mono">35.30°N, 75.63°E</span><span class="badge">High
+                  altitude</span></div>
+              <div class="entry-body">
+                <p>Gateway to the Karakoram — Shangrila, Upper Kachura, and the open plateau of Deosai National Park,
+                  one of the highest plateaus on earth.</p>
+                <div class="entry-tags"><span class="tag">Trekking</span><span class="tag">Wildlife</span><span
+                    class="tag">Camping</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Shandur Pass</span><span class="elev mono">3,700 m</span><span
+                  class="coords mono">36.08°N, 72.55°E</span><span class="badge">High altitude</span></div>
+              <div class="entry-body">
+                <p>Known as the "roof of the world" polo ground — the highest polo ground in the world, sitting between
+                  Chitral and Gilgit. The July polo festival is one of the most unusual events in the country.</p>
+                <div class="entry-tags"><span class="tag">Culture</span><span class="tag">Festival</span><span
+                    class="tag">Remote</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Naran</span><span class="elev mono">2,409 m</span><span
+                  class="coords mono">34.90°N, 73.65°E</span><span class="badge">High altitude</span></div>
+              <div class="entry-body">
+                <p>The base for exploring Kaghan Valley — Saif-ul-Malook Lake, Lulusar Lake, and the launch point for
+                  the drive up to Babusar Top. Busy in peak summer, but worth it for the lake alone.</p>
+                <div class="entry-tags"><span class="tag">Lakes</span><span class="tag">Summer trip</span><span
+                    class="tag">Family friendly</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Babusar Top</span><span class="elev mono">4,173 m</span><span
+                  class="coords mono">35.03°N, 74.03°E</span><span class="badge high">Extreme altitude</span></div>
+              <div class="entry-body">
+                <p>The pass that links Kaghan Valley to Chilas and the Karakoram Highway — snow-bound most of the year,
+                  and one of the most dramatic short high-altitude drives in the country.</p>
+                <div class="entry-tags"><span class="tag">Mountain pass</span><span class="tag">Seasonal</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Khunjerab Pass</span><span class="elev mono">4,693
+                  m</span><span class="coords mono">36.85°N, 75.42°E</span><span class="badge high">Extreme
+                  altitude</span></div>
+              <div class="entry-body">
+                <p>The highest paved international border crossing in the world, where the Karakoram Highway meets
+                  China. Thin air and one of the most dramatic border markers you'll ever stand at.</p>
+                <div class="entry-tags"><span class="tag">Border crossing</span><span class="tag">KKH</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-hero">
+        <div class="wrap reveal">
+          <div class="eyebrow" style="justify-content:center; font-size: 1rem;">READY WHEN YOU ARE</div>
+          <h2>Tell me which route caught your eye.</h2>
+          <p>I'll build a realistic itinerary around your dates and altitude comfort.</p><a class="btn btn-primary"
+            style="margin-top:34px;" onclick="goTo('contact')">Plan This Trip →</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ BIKE TOURS ============ -->
+    <div class="page" id="page-bike-tours">
+      <section class="page-header">
+        <div class="page-header-bg" id="bgBikeTours"></div>
+        <div class="page-header-scrim"></div>
+        <div class="wrap">
+          <div class="eyebrow"><span class="dot"></span> ON TWO WHEELS</div>
+          <h1>Bike Tours</h1>
+          <p class="sub">The Karakoram Highway and the northern passes, the way they're meant to be experienced — engine
+            noise, thin air, and nothing between you and the mountains.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="tier-strip reveal">
+            <div class="tier">
+              <div class="lvl">Riders</div>
+              <h4>Bring Your Own Bike</h4>
+              <p>You ride your own motorcycle, I plan the route, fuel stops, permits and lead the way.</p>
+            </div>
+            <div class="tier">
+              <div class="lvl">Group Rides</div>
+              <h4>Fixed Departures</h4>
+              <p>Small group convoys (4–8 riders) on set dates, with a support vehicle for luggage and breakdowns.</p>
+            </div>
+            <div class="tier">
+              <div class="lvl">Support</div>
+              <h4>What's Included</h4>
+              <p>Route planning, permits where needed, fuel-stop mapping, and a support vehicle carrying spares and
+                luggage.</p>
+            </div>
+          </div>
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">ROUTE OPTIONS</div>
+              <h2>Rides I lead</h2>
+            </div>
+            <p>Each of these follows a road I've personally ridden or driven — not a route pulled off a map.</p>
+          </div>
+          <div class="logbook">
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">KKH to Khunjerab</span><span class="elev mono">Up to 4,693
+                  m</span><span class="coords mono">7–9 days</span><span class="badge high">Advanced</span></div>
+              <div class="entry-body">
+                <p>Islamabad to the China border along the full Karakoram Highway — through Besham, Chilas, Gilgit and
+                  Hunza, with two nights in Hunza to acclimatise before the final push to Khunjerab.</p>
+                <div class="entry-tags"><span class="tag">Multi-day</span><span class="tag">Support vehicle</span><span
+                    class="tag">High altitude</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Babusar Circuit</span><span class="elev mono">Up to 4,173
+                  m</span><span class="coords mono">3–4 days</span><span class="badge">Intermediate</span></div>
+              <div class="entry-body">
+                <p>Islamabad – Naran – Babusar Top – Chilas – back via the KKH. A shorter, high-impact ride for riders
+                  who don't have a full week free.</p>
+                <div class="entry-tags"><span class="tag">Long weekend</span><span class="tag">Mountain pass</span>
+                </div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Shandur &amp; Chitral</span><span class="elev mono">Up to
+                  3,700 m</span><span class="coords mono">5–6 days</span><span class="badge">Intermediate</span></div>
+              <div class="entry-body">
+                <p>Gilgit to Chitral over Shandur Pass — rough, remote, and one of the most rewarding rides in the
+                  north. Best timed around the polo festival if the dates line up.</p>
+                <div class="entry-tags"><span class="tag">Remote</span><span class="tag">Unpaved sections</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="section-head reveal" style="margin-top:100px;">
+            <div>
+              <div class="eyebrow">BEFORE YOU RIDE</div>
+              <h2>What to bring</h2>
+            </div>
+            <p>The basics — I'll send a full checklist once your trip is confirmed.</p>
+          </div>
+          <div class="service-grid reveal">
+            <div class="service-card">
+              <div class="idx mono">01</div>
+              <h3>Riding Gear</h3>
+              <p>Proper riding jacket and pants, gloves, boots — layered for temperature swings from 35°C in the valleys
+                to near-freezing at the passes.</p>
+            </div>
+            <div class="service-card">
+              <div class="idx mono">02</div>
+              <h3>Documents</h3>
+              <p>CNIC or passport, bike registration/rental papers, and any NOC required for restricted sections — I
+                confirm exactly what's needed before you travel.</p>
+            </div>
+            <div class="service-card">
+              <div class="idx mono">03</div>
+              <h3>Fitness</h3>
+              <p>No technical skill required, but multiple 6–8 hour riding days at altitude are tiring — reasonable
+                fitness helps a lot.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-hero">
+        <div class="wrap reveal">
+          <div class="eyebrow" style="justify-content:center; font-size: 1rem;">SADDLE UP</div>
+          <h2>Next group ride is being planned now.</h2>
+          <p>Tell me your bike, your experience level, and your dates.</p><a class="btn btn-primary"
+            style="margin-top:34px;" onclick="goTo('contact')">Join a Ride →</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ TREKKING ============ -->
+    <div class="page" id="page-trekking">
+      <section class="page-header">
+        <div class="page-header-bg" id="bgTrekking"></div>
+        <div class="page-header-scrim"></div>
+        <div class="wrap">
+          <div class="eyebrow"><span class="dot"></span> ON FOOT</div>
+          <h1>Trekking &amp; Hiking</h1>
+          <p class="sub">The valleys and viewpoints no road reaches. From half-day forest walks to multi-day treks
+            toward some of the highest peaks on earth.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="tier-strip reveal">
+            <div class="tier">
+              <div class="lvl">Day Hikes</div>
+              <h4>No experience needed</h4>
+              <p>4–7 hour walks with a clear trail and a guide — good for building confidence before a longer trek.</p>
+            </div>
+            <div class="tier">
+              <div class="lvl">Multi-Day Treks</div>
+              <h4>Basic fitness required</h4>
+              <p>2–5 nights camping, gradual altitude gain, porters/mules available for gear.</p>
+            </div>
+            <div class="tier">
+              <div class="lvl">High-Altitude Treks</div>
+              <h4>Prior trekking experience recommended</h4>
+              <p>Multi-day routes above 4,000m with real exposure to weather and altitude — planned with proper
+                acclimatisation days.</p>
+            </div>
+          </div>
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">ROUTES</div>
+              <h2>Treks I lead</h2>
+            </div>
+            <p>A mix of classic Karakoram treks and quieter routes most visitors never hear about.</p>
+          </div>
+          <div class="logbook">
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Mukshpuri &amp; Miranjani</span><span class="elev mono">up to
+                  2,960 m</span><span class="coords mono">Nathia Gali</span><span class="badge">Day hike</span></div>
+              <div class="entry-body">
+                <p>Two of the most accessible peaks in the Galyat region — pine forest trails from Nathia Gali with wide
+                  views over the Kaghan hills on clear days.</p>
+                <div class="entry-tags"><span class="tag">Half-day</span><span class="tag">Beginner friendly</span>
+                </div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Fairy Meadows &amp; Nanga Parbat Base Camp View</span><span
+                  class="elev mono">3,300 m – 3,967 m</span><span class="coords mono">Diamer</span><span
+                  class="badge">Multi-day</span></div>
+              <div class="entry-body">
+                <p>A jeep ride and a forest trek up to a meadow with a straight-on view of Nanga Parbat's Rupal Face,
+                  one of the largest mountain faces in the world. Extendable to Beyal Camp for closer views.</p>
+                <div class="entry-tags"><span class="tag">2–3 nights</span><span class="tag">Camping</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Rakaposhi Base Camp</span><span class="elev mono">~3,300
+                  m</span><span class="coords mono">Hunza</span><span class="badge">Multi-day</span></div>
+              <div class="entry-body">
+                <p>A trek from Minapin village through pasture and glacier moraine to a base camp with close-up views of
+                  Rakaposhi's north face.</p>
+                <div class="entry-tags"><span class="tag">2 nights</span><span class="tag">Glacier views</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Deosai Plains Trek</span><span class="elev mono">up to 4,114
+                  m</span><span class="coords mono">Skardu / Astore</span><span class="badge high">High altitude</span>
+              </div>
+              <div class="entry-body">
+                <p>Multi-day walking and camping across one of the highest plateaus on earth, with a real chance of
+                  spotting the Himalayan brown bear in season.</p>
+                <div class="entry-tags"><span class="tag">3–4 nights</span><span class="tag">Wildlife</span><span
+                    class="tag">Camping</span></div>
+              </div>
+            </div>
+            <div class="entry reveal">
+              <div class="entry-meta"><span class="place">Rush Lake Trek</span><span class="elev mono">4,694
+                  m</span><span class="coords mono">Nagar, near Hunza</span><span class="badge high">High
+                  altitude</span></div>
+              <div class="entry-body">
+                <p>One of the highest alpine lakes reachable by trek in the region, with a wide 360° panorama of
+                  Karakoram giants from the ridge above it.</p>
+                <div class="entry-tags"><span class="tag">3–4 nights</span><span class="tag">Alpine lake</span><span
+                    class="tag">Experienced trekkers</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-hero">
+        <div class="wrap reveal">
+          <div class="eyebrow" style="justify-content:center; font-size: 1rem;">EARN THE VIEW</div>
+          <h2>Tell me your trekking experience and I'll match you to the right route.</h2>
+          <p>Not sure what you're ready for? Just ask — no route is too ambitious to discuss.</p><a
+            class="btn btn-primary" style="margin-top:34px;" onclick="goTo('contact')">Plan a Trek →</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ JOURNAL ============ -->
+    <div class="page" id="page-journal">
+      <section class="page-header">
+        <div class="wrap">
+          <div class="eyebrow"><span class="dot"></span> FIELD NOTES</div>
+          <h1>Journal</h1>
+          <p class="sub">Route notes, honest season guides, and stories from the road — written from actual trips, not
+            brochures.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">ROUTE &amp; LOGISTICS</div>
+              <h2>Plan it right</h2>
+            </div>
+            <p>The practical posts — permits, timing, and what the road actually looks like.</p>
+          </div>
+          <div class="journal-grid reveal" id="journalGridLogistics"></div>
+        </div>
+      </section>
+      <section class="section" style="padding-top:0;">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">STORIES</div>
+              <h2>From the road</h2>
+            </div>
+            <p>The personal side — this is what makes people trust who they're travelling with.</p>
+          </div>
+          <div class="journal-grid reveal" id="journalGridStories"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- blog post reader -->
+    <div id="postModal" class="post-modal" aria-hidden="true">
+      <div class="post-modal-inner">
+        <button id="postModalClose" class="post-modal-close" aria-label="Close">&times;</button>
+        <div id="postModalImg" class="post-modal-img"></div>
+        <div class="post-modal-body">
+          <div class="meta" id="postModalMeta"></div>
+          <h2 id="postModalTitle"></h2>
+          <div id="postModalContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ CONTACT ============ -->
+    <div class="page" id="page-contact">
+      <section class="page-header">
+        <div class="wrap">
+          <div class="eyebrow"><span class="dot"></span> LET'S PLAN IT</div>
+          <h1>Get in touch</h1>
+          <p class="sub">Fastest replies are on WhatsApp. For detailed itinerary requests, email works well too.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="contact-grid">
+            <div class="reveal">
+              <div class="section-head" style="border:none; margin-bottom:30px; padding-bottom:0;">
+                <div>
+                  <div class="eyebrow">REACH ME DIRECTLY</div>
+                  <h2 style="font-size:1.8rem;">Every channel, in one place</h2>
+                </div>
+              </div>
+              <div class="contact-channels">
+                <a class="channel" href="https://wa.me/923054823010" target="_blank" rel="noopener">
+                  <div class="ic">WA</div>
+                  <div>
+                    <div class="lbl">WhatsApp · Pakistan</div>
+                    <div class="val">+92 305 4823010</div>
+                  </div>
+                </a>
+                <a class="channel" href="https://wa.me/13434895860" target="_blank" rel="noopener">
+                  <div class="ic">WA</div>
+                  <div>
+                    <div class="lbl">WhatsApp · Canada</div>
+                    <div class="val">+1 (343) 489-5860</div>
+                  </div>
+                </a>
+                <a class="channel" href="mailto:marcopolotraveler0@gmail.com">
+                  <div class="ic">@</div>
+                  <div>
+                    <div class="lbl">Email</div>
+                    <div class="val">marcopolotraveler0@gmail.com</div>
+                  </div>
+                </a>
+                <a class="channel" href="https://www.instagram.com/the_ali_nouman" target="_blank" rel="noopener">
+                  <div class="ic">IG</div>
+                  <div>
+                    <div class="lbl">Instagram</div>
+                    <div class="val">@the_ali_nouman</div>
+                  </div>
+                </a>
+              </div>
+              <p style="margin-top:26px; color:rgba(36,48,58,0.6); font-size:0.9rem;">Prefer WhatsApp for the fastest
+                reply — Pakistan or Canada, whichever's easier for you.</p>
+            </div>
+            <form class="form reveal" id="contactForm" onsubmit="return sendInquiry(event)">
+              <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required></div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required>
+              </div>
+              <div class="field"><label for="trip">Which trip?</label><select id="trip" name="trip">
+                  <option>Road Trip</option>
+                  <option>Bike Tour</option>
+                  <option>Trekking / Hiking</option>
+                  <option>Not sure yet</option>
+                </select></div>
+              <div class="field"><label for="dates">Rough dates</label><input id="dates" name="dates" type="text"
+                  placeholder="e.g. mid-September, 5–6 days"></div>
+              <div class="field"><label for="message">Message</label><textarea id="message" name="message"
+                  placeholder="Group size, fitness level, anything specific you have in mind..."></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send via
+                WhatsApp →</button>
+              <a href="#" onclick="sendInquiryEmail(); return false;"
+                style="display:block; text-align:center; margin-top:14px; font-size:0.82rem; color:rgba(32,48,58,0.6); text-decoration:underline;">or
+                send by email instead</a>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ MANAGE (site owner only) ============ -->
+    <div class="page" id="page-manage">
+      <section class="page-header">
+        <div class="wrap">
+          <div class="eyebrow"><span class="dot"></span> SITE OWNER ONLY</div>
+          <h1>Manage Journal</h1>
+          <p class="sub">Write a post, see it appear in the Journal instantly, then download an updated copy of your
+            site whenever you're ready to publish.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap contact-grid">
+          <div class="reveal">
+            <div class="section-head" style="border:none; margin-bottom:24px; padding-bottom:0;">
+              <div>
+                <div class="eyebrow">NEW POST</div>
+                <h2 style="font-size:1.6rem;">Write something</h2>
+              </div>
+            </div>
+            <form class="form" id="newPostForm" onsubmit="return addPostFromForm(event)">
+              <div class="field"><label>Section</label>
+                <select id="npCategory">
+                  <option value="stories">Stories</option>
+                  <option value="logistics">Route &amp; Logistics</option>
+                </select>
+              </div>
+              <div class="field"><label>Small label (e.g. "Hunza · Story")</label><input id="npMeta" type="text"
+                  required></div>
+              <div class="field"><label>Title</label><input id="npTitle" type="text" required></div>
+              <div class="field"><label>Short excerpt (shown on the card)</label><textarea id="npExcerpt" required
+                  style="min-height:70px;"></textarea></div>
+              <div class="field"><label>Full post (leave a blank line between paragraphs)</label><textarea id="npBody"
+                  required style="min-height:160px;"></textarea></div>
+              <div class="field"><label>Photo (optional — auto-compressed)</label><input id="npPhoto" type="file"
+                  accept="image/*"></div>
+              <button type="submit" class="btn btn-primary">Add to Journal</button>
+            </form>
+          </div>
+          <div class="reveal">
+            <div class="section-head" style="border:none; margin-bottom:24px; padding-bottom:0;">
+              <div>
+                <div class="eyebrow">CURRENT POSTS</div>
+                <h2 style="font-size:1.6rem;">Delete or reorder</h2>
+              </div>
+            </div>
+            <div id="manageList" style="display:flex; flex-direction:column; gap:10px;"></div>
+            <div style="margin-top:34px; padding:22px; background:var(--ink); color:var(--snow); border-radius:4px;">
+              <p style="font-size:0.9rem; color:rgba(255,253,248,0.75); margin-bottom:16px;">When you're happy with your
+                changes, download the updated file and re-upload it wherever your site is hosted — this is what actually
+                publishes it for visitors.</p>
+              <a class="btn btn-primary" onclick="downloadUpdatedSite()" style="width:100%; justify-content:center;">⬇
+                Download Updated Site</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="wrap" style="flex-direction:column; align-items:flex-start; gap:18px;">
+      <div style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">
+        <span>© Marco Polo Traveler — Guided journeys through Northern Pakistan</span>
+        <span>Hunza · Skardu · Khunjerab Pass · Babusar Top · Shandur Pass · Murree · Nathia Gali</span>
+      </div>
+      <button onclick="unlockManage()"
+        style="background:none; border:1px solid rgba(255,253,248,0.3); color:var(--snow); padding:9px 18px; border-radius:2px; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; cursor:pointer; font-family:'JetBrains Mono', monospace;">⚙
+        Site Owner Login</button>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
